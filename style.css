@@ -39,6 +39,10 @@ body {
   overflow-x: hidden;
 }
 
+#root {
+  min-height: 100vh;
+}
+
 /* ============================================
    STARFIELD CANVAS
    ============================================ */
@@ -141,9 +145,15 @@ body {
   width: 100%;
 }
 
+.nav-link.active::after {
+  width: 100%;
+}
+
 
 
 .hamburger {
+  border: none;
+  background: transparent;
   display: none;
   flex-direction: column;
   gap: 6px;
@@ -471,9 +481,7 @@ section {
   background: var(--accent);
 }
 
-.credential-list strong {
-  color: var(--text-primary);
-}
+
 
 .credential-list.two-col {
   display: flex;
@@ -831,12 +839,7 @@ section {
   box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.15);
 }
 
-.contact-cta p {
-  color: var(--text-secondary);
-  margin-bottom: 1.5rem;
-  font-size: 1.05rem;
-  line-height: 1.6;
-}
+
 
 .contact-form {
   display: flex;
@@ -902,9 +905,26 @@ section {
   transform: translateY(-4px);
 }
 
-.social-link svg {
-  width: 20px;
-  height: 20px;
+.scroll-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 900;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(56, 189, 248, 0.3);
+}
+
+.scroll-top-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.5);
 }
 
 /* ============================================
@@ -1001,23 +1021,7 @@ section {
   }
 }
 
-@keyframes float {
-  0%, 100% {
-    transform: translate(-50%, -50%) translateY(0);
-  }
-  50% {
-    transform: translate(-50%, -50%) translateY(-20px);
-  }
-}
 
-@keyframes rotate {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
 
 @keyframes growWidth {
   from {
@@ -1041,7 +1045,12 @@ section {
    RESPONSIVE DESIGN
    ============================================ */
 @media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
   .nav-menu {
+    display: none;
     gap: 1rem;
   }
 
@@ -1096,6 +1105,40 @@ section {
 
   .hero-subtitle {
     font-size: 1.2rem;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+
+  .nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: rgba(15, 23, 42, 0.95);
+    padding: 1rem 0;
+    gap: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-menu.active li {
+    width: 100%;
+    padding: 0.75rem 1rem;
+  }
+
+  .nav-menu.active .nav-link {
+    display: block;
   }
 
   .projects-grid {
@@ -1202,6 +1245,14 @@ section {
 
   .contact-content {
     grid-template-columns: 1fr;
+  }
+
+  .scroll-top-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
   }
 }
 
