@@ -303,32 +303,56 @@ body {
 
 .hero-visual {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 500px;
   animation: slideInRight 0.8s ease-out;
 }
 
-.visual-circle {
-  position: absolute;
-  width: 300px;
-  height: 300px;
+.hero-image-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 420px;
+  height: 420px;
+}
+
+.hero-photo {
+  width: 360px;
+  height: 360px;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(14, 165, 233, 0.2));
+  object-fit: cover;
+  object-position: center center;
+  border: 3px solid var(--accent);
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.35), 0 0 60px rgba(56, 189, 248, 0.15);
+  position: relative;
+  z-index: 2;
+}
+
+.hero-image-ring {
+  position: absolute;
+  width: 390px;
+  height: 390px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(56, 189, 248, 0.35);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: float 6s ease-in-out infinite;
+  animation: pulse-ring 3s ease-in-out infinite;
 }
 
-.visual-accent {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  border: 2px solid var(--accent);
-  border-radius: 20%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-  animation: rotate 20s linear infinite;
+.hero-image-ring--outer {
+  width: 430px;
+  height: 430px;
+  border-color: rgba(56, 189, 248, 0.15);
+  animation-delay: 1.5s;
+}
+
+@keyframes pulse-ring {
+  0%, 100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 1; transform: translate(-50%, -50%) scale(1.04); }
 }
 
 /* ============================================
@@ -1032,6 +1056,26 @@ section {
 
   .hero-visual {
     height: 300px;
+  }
+
+  .hero-image-wrapper {
+    width: 220px;
+    height: 220px;
+  }
+
+  .hero-photo {
+    width: 185px;
+    height: 185px;
+  }
+
+  .hero-image-ring {
+    width: 205px;
+    height: 205px;
+  }
+
+  .hero-image-ring--outer {
+    width: 235px;
+    height: 235px;
   }
 
   .hero-stats {
