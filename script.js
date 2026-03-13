@@ -3,7 +3,7 @@
    ============================================ */
 document.addEventListener('DOMContentLoaded', function () {
   initializeStarfield();
-  initializeTheme();
+  
   initializeNavigation();
   initializeScrollReveal();
   initializeIntersectionObserver();
@@ -68,28 +68,7 @@ function initializeStarfield() {
   animateStars();
 }
 
-/* ============================================
-   THEME TOGGLE
-   ============================================ */
-function initializeTheme() {
-  const themeToggle = document.getElementById('theme-toggle');
-  const currentTheme = localStorage.getItem('theme') || 'dark';
 
-  if (currentTheme === 'light') {
-    document.body.classList.add('light');
-    themeToggle.textContent = '☀️';
-  } else {
-    document.body.classList.remove('light');
-    themeToggle.textContent = '🌙';
-  }
-
-  themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('light');
-    const isLight = document.body.classList.contains('light');
-    themeToggle.textContent = isLight ? '☀️' : '🌙';
-    localStorage.setItem('theme', isLight ? 'light' : 'dark');
-  });
-}
 
 /* ============================================
    NAVIGATION
@@ -140,7 +119,20 @@ function initializeNavigation() {
    SCROLL REVEAL ANIMATIONS
    ============================================ */
 function initializeScrollReveal() {
-  const revealElements = document.querySelectorAll('.reveal');
+  const revealTargets = document.querySelectorAll(
+    '.section-title, .section-subtitle, .about-text, .trait, .credential-card, .tech-category, .project-card, .summary-item, .info-item, .contact-cta, .social-link, .footer-section'
+  );
+
+  revealTargets.forEach((el, index) => {
+    el.classList.add('scroll-reveal');
+    if (index % 3 === 0) {
+      el.classList.add('from-left');
+    } else if (index % 3 === 1) {
+      el.classList.add('from-right');
+    }
+  });
+
+  const revealElements = document.querySelectorAll('.scroll-reveal');
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -182,6 +174,8 @@ function initializeIntersectionObserver() {
     observer.observe(section);
   });
 
+  updateActiveNavLink();
+
   // Update active nav link based on scroll position
   document.addEventListener('scroll', () => {
     updateActiveNavLink();
@@ -210,15 +204,7 @@ function updateActiveNavLink() {
   });
 }
 
-/* ============================================
-   PARALLAX EFFECT
-   ============================================ */
-window.addEventListener('scroll', () => {
-  const hero = document.querySelector('.hero');
-  if (hero && window.pageYOffset < window.innerHeight) {
-    hero.style.transform = `translateY(${window.pageYOffset * 0.5}px)`;
-  }
-});
+
 
 /* ============================================
    BUTTON RIPPLE EFFECT
@@ -303,15 +289,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
-/* ============================================
-   SMOOTH ANIMATION ON LOAD
-   ============================================ */
-window.addEventListener('load', () => {
-  document.querySelectorAll('section').forEach((section, index) => {
-    section.style.animation = `fadeIn 0.8s ease-out ${index * 0.1}s forwards`;
-    section.style.opacity = '0';
-  });
-});
+
 
 /* ============================================
    PROJECT CARD HOVER EFFECT

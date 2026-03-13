@@ -15,15 +15,7 @@
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-body.light {
-  --bg-primary: #f8fafc;
-  --bg-secondary: #f1f5f9;
-  --text-primary: #1e293b;
-  --text-secondary: #64748b;
-  --accent: #0077cc;
-  --accent-dark: #0066aa;
-  --border: rgba(0, 0, 0, 0.1);
-}
+
 
 /* ============================================
    GLOBAL STYLES
@@ -149,25 +141,7 @@ body {
   width: 100%;
 }
 
-.theme-toggle {
-  background: none;
-  border: 1px solid var(--border);
-  color: var(--text-primary);
-  font-size: 1.2rem;
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: var(--transition);
-}
 
-.theme-toggle:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: var(--accent);
-}
 
 .hamburger {
   display: none;
@@ -211,7 +185,7 @@ body {
 
 .hero-greeting {
   display: block;
-  font-size: 1.1rem;
+  font-size: 1.45rem;
   color: var(--accent);
   font-weight: 500;
   margin-bottom: 0.5rem;
@@ -361,7 +335,7 @@ body {
    SECTION STYLES
    ============================================ */
 section {
-  padding: 80px 20px;
+  padding: 56px 20px;
 }
 
 .section-title {
@@ -387,12 +361,13 @@ section {
    ============================================ */
 .about {
   background: linear-gradient(180deg, rgba(30, 41, 59, 0.5), rgba(15, 23, 42, 0.8));
+  animation-duration: 0.35s !important;
 }
 
 .about-text {
   max-width: 800px;
   margin: 0 auto;
-  animation: fadeIn 0.8s ease-out;
+  animation: fadeIn 0.25s ease-out;
 }
 
 .about-text p {
@@ -409,6 +384,79 @@ section {
   margin-top: 2.5rem;
 }
 
+/* ============================================
+   CREDENTIALS SECTION
+   ============================================ */
+.credentials {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.86), rgba(30, 41, 59, 0.5));
+}
+
+.credentials-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.credential-card {
+  padding: 1.4rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+  transition: var(--transition);
+}
+
+.credential-card:hover {
+  border-color: rgba(56, 189, 248, 0.45);
+  background: linear-gradient(160deg, rgba(56, 189, 248, 0.12), rgba(255, 255, 255, 0.04));
+  transform: translateY(-3px);
+}
+
+.credential-title {
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.credential-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.credential-list li {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.credential-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.credential-list strong {
+  color: var(--text-primary);
+}
+
+.credential-list.two-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
 .trait {
   display: flex;
   flex-direction: column;
@@ -418,14 +466,14 @@ section {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border);
   border-radius: 12px;
-  transition: var(--transition);
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
   cursor: pointer;
 }
 
 .trait:hover {
   background: rgba(56, 189, 248, 0.1);
   border-color: var(--accent);
-  transform: translateY(-4px);
+  transform: translateY(-2px);
 }
 
 .trait-icon {
@@ -442,6 +490,7 @@ section {
    ============================================ */
 .tech {
   background: linear-gradient(180deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.5));
+  padding-bottom: 40px;
 }
 
 .tech-grid {
@@ -508,6 +557,7 @@ section {
    ============================================ */
 .projects {
   background: linear-gradient(180deg, rgba(30, 41, 59, 0.5), rgba(15, 23, 42, 0.8));
+  padding-top: 40px;
 }
 
 .projects-grid {
@@ -575,6 +625,19 @@ section {
   margin-bottom: 0.5rem;
 }
 
+.project-internship {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  border-radius: 20px;
+  padding: 2px 10px;
+  margin-bottom: 0.6rem;
+  margin-left: 0.5rem;
+}
+
 .project-title {
   font-size: 1.3rem;
   font-weight: 700;
@@ -609,6 +672,7 @@ section {
 .project-link {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   color: var(--accent);
   text-decoration: none;
   font-weight: 600;
@@ -619,6 +683,25 @@ section {
 .project-link:hover {
   gap: 0.5rem;
   transform: translateX(4px);
+}
+
+.project-link.project-link-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: rgba(56, 189, 248, 0.08);
+}
+
+.project-link.project-link-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.project-link.project-link-icon:hover {
+  background: rgba(56, 189, 248, 0.16);
+  border-color: var(--accent);
+  transform: translateY(-2px);
 }
 
 .projects-summary {
@@ -711,10 +794,17 @@ section {
 
 .contact-cta {
   padding: 2rem;
-  background: rgba(56, 189, 248, 0.1);
-  border: 2px solid var(--accent);
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid transparent;
   border-radius: 12px;
   text-align: center;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-cta:hover,
+.contact-cta:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.15);
 }
 
 .contact-cta p {
@@ -724,18 +814,54 @@ section {
   line-height: 1.6;
 }
 
-.social-links {
+.contact-form {
   display: flex;
+  flex-direction: column;
   gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
+}
+
+.contact-input {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: rgba(148, 163, 184, 0.25);
+  color: var(--text-primary);
+  border-radius: 14px;
+  padding: 16px 18px;
+  font-size: 1rem;
+  outline: none;
+  transition: var(--transition);
+}
+
+.contact-input::placeholder {
+  color: rgba(203, 213, 225, 0.75);
+}
+
+.contact-input:focus {
+  border-color: var(--accent);
+  background: rgba(148, 163, 184, 0.32);
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+.contact-textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
+.social-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  width: 100%;
 }
 
 .social-link {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
-  padding: 1rem 1.5rem;
+  width: 100%;
+  min-height: 110px;
+  padding: 1rem;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -933,16 +1059,14 @@ section {
   }
 
   .social-links {
-    gap: 0.5rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
   }
 
   .social-link {
-    padding: 0.75rem 1rem;
+    min-height: 100px;
+    padding: 0.75rem;
     font-size: 0.9rem;
-  }
-
-  .social-link span {
-    display: none;
   }
 
   .tech-grid {
@@ -950,7 +1074,15 @@ section {
   }
 
   section {
-    padding: 60px 20px;
+    padding: 44px 20px;
+  }
+
+  .tech {
+    padding-bottom: 30px;
+  }
+
+  .projects {
+    padding-top: 30px;
   }
 }
 
@@ -984,6 +1116,10 @@ section {
 
   .hero-description {
     font-size: 0.95rem;
+  }
+
+  .social-links {
+    grid-template-columns: 1fr;
   }
 
   .hero-stats {
@@ -1028,29 +1164,32 @@ section {
 /* ============================================
    SCROLL ANIMATIONS
    ============================================ */
-section {
+.scroll-reveal {
   opacity: 0;
-  animation: fadeIn 0.8s ease-out forwards;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
 }
 
-section.active {
-  animation: fadeIn 0.8s ease-out;
+.scroll-reveal.from-left {
+  transform: translateX(-32px);
 }
 
-/* Scroll reveal for elements */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.8s ease-out forwards;
+.scroll-reveal.from-right {
+  transform: translateX(32px);
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal,
+  .scroll-reveal.from-left,
+  .scroll-reveal.from-right {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
+    transition: none;
   }
 }
