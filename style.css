@@ -874,6 +874,33 @@ section {
   resize: vertical;
 }
 
+.contact-form .btn[disabled] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.contact-form .btn[disabled]:hover {
+  background: var(--accent);
+  transform: none;
+  box-shadow: none;
+}
+
+.contact-form-status {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.contact-form-status.success {
+  color: #34d399;
+}
+
+.contact-form-status.error {
+  color: #f87171;
+}
+
 .social-links {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -944,7 +971,7 @@ section {
 
 .footer-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
   gap: 2rem;
   margin-bottom: 2rem;
   max-width: 1200px;
@@ -952,32 +979,62 @@ section {
   margin-right: auto;
 }
 
+.footer-links-group {
+  grid-column: 2 / span 2;
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 4rem;
+  row-gap: 0.5rem;
+  align-items: start;
+  justify-content: start;
+}
+
+.footer-links-group > .footer-section:last-child {
+  position: relative;
+}
+
+@media (max-width: 900px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-links-group {
+    grid-column: auto;
+    justify-content: start;
+  }
+}
+
 .footer-follow-header {
-  display: flex;
-  align-items: center;
-  gap: 0.9rem;
-  margin-bottom: 1rem;
+  display: block;
+  margin-bottom: 0.35rem;
 }
 
 .footer-follow-header h4 {
   margin-bottom: 0;
 }
 
-.footer-follow-header .footer-robot-wrap {
-  width: 92px;
+.footer-robot-standalone {
+  position: absolute;
+  top: 0.2rem;
+  left: calc(100% + 14.8rem);
+  margin-top: 0;
+}
+
+.footer-robot-standalone .footer-robot-wrap {
+  width: 140px;
   margin-bottom: 0;
   margin-left: 0;
   margin-right: 0;
 }
 
-.footer-follow-header .robot {
+.footer-robot-standalone .robot {
   margin-left: 0;
-  transform: scale(0.78);
+  transform: scale(10.15);
   transform-origin: left top;
 }
 
-.footer-follow-header .robot-bubble {
-  left: 44px;
+.footer-robot-standalone .robot-bubble {
+  display: none;
 }
 
 .footer-robot-wrap {
@@ -1017,7 +1074,8 @@ section {
   position: relative;
   width: 72px;
   margin-left: 12px;
-  animation: robotWave 2.2s ease-in-out infinite;
+  animation: robotFloat 3.2s ease-in-out infinite;
+  filter: drop-shadow(0 8px 16px rgba(10, 20, 40, 0.45));
 }
 
 .robot-antenna {
@@ -1046,13 +1104,25 @@ section {
   width: 72px;
   height: 42px;
   border-radius: 12px;
-  background: linear-gradient(160deg, rgba(56, 189, 248, 0.4), rgba(30, 41, 59, 0.95));
-  border: 1px solid rgba(56, 189, 248, 0.5);
+  background: linear-gradient(160deg, rgba(125, 211, 252, 0.32), rgba(30, 41, 59, 0.96) 60%);
+  border: 1px solid rgba(125, 211, 252, 0.48);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   position: relative;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), inset 0 -10px 16px rgba(2, 6, 23, 0.55);
+}
+
+.robot-head::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  width: 25px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .robot-eye {
@@ -1080,9 +1150,10 @@ section {
   height: 34px;
   margin: 7px auto 0;
   border-radius: 11px;
-  border: 1px solid rgba(56, 189, 248, 0.4);
-  background: linear-gradient(150deg, rgba(30, 41, 59, 0.92), rgba(56, 189, 248, 0.2));
+  border: 1px solid rgba(125, 211, 252, 0.42);
+  background: linear-gradient(150deg, rgba(15, 23, 42, 0.95), rgba(56, 189, 248, 0.22));
   position: relative;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), inset 0 -9px 14px rgba(2, 6, 23, 0.6);
 }
 
 .robot-core {
@@ -1099,19 +1170,45 @@ section {
 
 .robot-arm {
   position: absolute;
-  top: 10px;
-  width: 12px;
+  top: 9px;
+  width: 24px;
+  height: 5px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(148, 163, 184, 0.95), rgba(203, 213, 225, 0.9));
+  box-shadow: 0 0 6px rgba(148, 163, 184, 0.35);
+}
+
+.robot-arm::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 16px;
   height: 4px;
   border-radius: 999px;
-  background: rgba(148, 163, 184, 0.9);
+  background: linear-gradient(90deg, rgba(203, 213, 225, 0.92), rgba(226, 232, 240, 0.9));
+  box-shadow: 0 0 5px rgba(148, 163, 184, 0.3);
 }
 
 .robot-arm-left {
-  left: -10px;
+  left: -21px;
+}
+
+.robot-arm-left::after {
+  left: -12px;
+  transform: rotate(14deg);
+  transform-origin: right center;
 }
 
 .robot-arm-right {
-  right: -10px;
+  right: -21px;
+  transform-origin: left center;
+  animation: robotRightHandWave 2.4s cubic-bezier(0.33, 1, 0.68, 1) infinite;
+}
+
+.robot-arm-right::after {
+  right: -12px;
+  transform-origin: left center;
+  animation: robotRightForearmWave 2.4s cubic-bezier(0.33, 1, 0.68, 1) infinite;
 }
 
 .footer-section h3,
@@ -1198,6 +1295,56 @@ section {
   }
 }
 
+@keyframes robotFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-2px) rotate(-0.8deg);
+  }
+}
+
+@keyframes robotRightHandWave {
+  0%,
+  36%,
+  100% {
+    transform: rotate(0deg) translateY(0);
+  }
+  44% {
+    transform: rotate(-38deg) translateY(-1px);
+  }
+  52% {
+    transform: rotate(-16deg) translateY(-1px);
+  }
+  60% {
+    transform: rotate(-34deg) translateY(-1px);
+  }
+  68% {
+    transform: rotate(-10deg) translateY(0);
+  }
+}
+
+@keyframes robotRightForearmWave {
+  0%,
+  36%,
+  100% {
+    transform: rotate(0deg);
+  }
+  44% {
+    transform: rotate(-28deg);
+  }
+  52% {
+    transform: rotate(-8deg);
+  }
+  60% {
+    transform: rotate(-24deg);
+  }
+  68% {
+    transform: rotate(-6deg);
+  }
+}
+
 @keyframes robotBlink {
   0%,
   44%,
@@ -1253,6 +1400,11 @@ section {
   .nav-menu {
     display: none;
     gap: 1rem;
+  }
+
+  .footer-robot-standalone {
+    position: static;
+    margin-top: 0.6rem;
   }
 
   .nav-link {
@@ -1444,14 +1596,15 @@ section {
     gap: 1.5rem;
   }
 
+  .footer-links-group {
+    grid-template-columns: auto auto;
+    column-gap: 4rem;
+    row-gap: 0.5rem;
+  }
+
   .footer-robot-wrap {
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .footer-follow-header .footer-robot-wrap {
-    margin-left: 0;
-    margin-right: 0;
   }
 
   .contact-content {

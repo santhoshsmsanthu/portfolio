@@ -1,4 +1,65 @@
+import { useMemo, useState } from "react";
+
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState("");
+
+  const isEmailValid = useMemo(
+    () => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim()),
+    [formData.email]
+  );
+
+  const isFormValid =
+    formData.name.trim().length > 0 &&
+    isEmailValid &&
+    formData.message.trim().length > 0;
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    if (!isFormValid) return;
+
+    setIsSubmitting(true);
+    setSubmitStatus("");
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/santhoshsmsanthu0@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name.trim(),
+          email: formData.email.trim(),
+          message: formData.message.trim(),
+          _subject: `Portfolio Contact from ${formData.name.trim()}`,
+          _captcha: "false",
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit form");
+      }
+
+      setSubmitStatus("success");
+      setFormData({ name: "", email: "", message: "" });
+    } catch {
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="contact">
       <div className="container">
@@ -25,11 +86,42 @@ export default function Contact() {
             </div>
           </div>
 
-          <form className="contact-cta contact-form" action="mailto:santhoshsmsanthu0@gmail.com" method="post" encType="text/plain">
-            <input type="text" name="name" className="contact-input" placeholder="Your Name" required />
-            <input type="email" name="email" className="contact-input" placeholder="Your Email" required />
-            <textarea name="message" className="contact-input contact-textarea" placeholder="Your Message" required></textarea>
-            <button type="submit" className="btn btn-primary btn-large">Send me an email</button>
+          <form className="contact-cta contact-form" onSubmit={handleSubmit} noValidate>
+            <input
+              type="text"
+              name="name"
+              className="contact-input"
+              placeholder="Your Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              className="contact-input"
+              placeholder="Your Email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <textarea
+              name="message"
+              className="contact-input contact-textarea"
+              placeholder="Your Message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            ></textarea>
+            <button type="submit" className="btn btn-primary btn-large" disabled={!isFormValid || isSubmitting}>
+              {isSubmitting ? "Sending..." : "Send me an email"}
+            </button>
+            {submitStatus === "success" && (
+              <p className="contact-form-status success">Message sent successfully.</p>
+            )}
+            {submitStatus === "error" && (
+              <p className="contact-form-status error">Failed to send message. Please try again.</p>
+            )}
           </form>
 
           <div className="social-links">

@@ -8,42 +8,47 @@ export default function Footer() {
             <p>Full-Stack Developer passionate about creating innovative solutions with modern technologies.</p>
           </div>
 
-          <div className="footer-section">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#tech">Tech Stack</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
+          <div className="footer-links-group">
+            <div className="footer-section">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#tech">Tech Stack</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
 
-          <div className="footer-section">
-            <div className="footer-follow-header">
-              <h4>Follow Me</h4>
-              <div className="footer-robot-wrap" aria-hidden="true">
-                <div className="robot-bubble">Hello!</div>
-                <div className="robot">
-                  <div className="robot-antenna"></div>
-                  <div className="robot-head">
-                    <span className="robot-eye"></span>
-                    <span className="robot-eye"></span>
-                    <span className="robot-mouth"></span>
-                  </div>
-                  <div className="robot-body">
-                    <span className="robot-arm robot-arm-left"></span>
-                    <span className="robot-core"></span>
-                    <span className="robot-arm robot-arm-right"></span>
+            <div className="footer-section">
+              <div className="footer-follow-header">
+                <h4>Follow Me</h4>
+              </div>
+              <ul>
+                <li><a href="https://github.com/santhoshsmsanthu" target="_blank" rel="noreferrer">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/santhosh-s-m-50a6082a5" target="_blank" rel="noreferrer">LinkedIn</a></li>
+                <li><a href="mailto:santhoshsmsanthu0@gmail.com">Email</a></li>
+              </ul>
+              <div className="footer-robot-standalone" aria-hidden="true">
+                <div className="footer-robot-wrap">
+                  <div className="robot-bubble"></div>
+                  <div className="robot">
+                    <div className="robot-antenna"></div>
+                    <div className="robot-head">
+                      <span className="robot-eye"></span>
+                      <span className="robot-eye"></span>
+                      <span className="robot-mouth"></span>
+                    </div>
+                    <div className="robot-body">
+                      <span className="robot-arm robot-arm-left"></span>
+                      <span className="robot-core"></span>
+                      <span className="robot-arm robot-arm-right"></span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <ul>
-              <li><a href="https://github.com/santhoshsmsanthu" target="_blank" rel="noreferrer">GitHub</a></li>
-              <li><a href="https://www.linkedin.com/in/santhosh-s-m-50a6082a5" target="_blank" rel="noreferrer">LinkedIn</a></li>
-              <li><a href="mailto:santhoshsmsanthu0@gmail.com">Email</a></li>
-            </ul>
+
           </div>
         </div>
 
