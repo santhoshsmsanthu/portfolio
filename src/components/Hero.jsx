@@ -1,6 +1,34 @@
+import { useRef } from "react";
 import santhoshImage from "../assets/santhosh.png";
 
 export default function Hero() {
+  const photoRef = useRef(null);
+
+  const handlePhotoTilt = (event) => {
+    const element = photoRef.current;
+    if (!element) return;
+
+    const bounds = element.getBoundingClientRect();
+    const x = event.clientX - bounds.left;
+    const y = event.clientY - bounds.top;
+    const rotateY = ((x / bounds.width) - 0.5) * 20;
+    const rotateX = (0.5 - (y / bounds.height)) * 20;
+
+    element.style.setProperty("--tilt-x", `${rotateX.toFixed(2)}deg`);
+    element.style.setProperty("--tilt-y", `${rotateY.toFixed(2)}deg`);
+    element.style.setProperty("--shine-x", `${(x / bounds.width) * 100}%`);
+    element.style.setProperty("--shine-y", `${(y / bounds.height) * 100}%`);
+  };
+
+  const resetPhotoTilt = () => {
+    const element = photoRef.current;
+    if (!element) return;
+    element.style.setProperty("--tilt-x", "0deg");
+    element.style.setProperty("--tilt-y", "0deg");
+    element.style.setProperty("--shine-x", "50%");
+    element.style.setProperty("--shine-y", "50%");
+  };
+
   return (
     <section id="home" className="hero">
       <div className="hero-content">
@@ -39,10 +67,21 @@ export default function Hero() {
         </div>
 
         <div className="hero-visual">
-          <div className="hero-image-wrapper">
+          <div
+            className="hero-image-wrapper"
+            ref={photoRef}
+            onMouseMove={handlePhotoTilt}
+            onMouseLeave={resetPhotoTilt}
+          >
+            <div className="hero-photo-shadow"></div>
             <div className="hero-image-ring"></div>
             <div className="hero-image-ring hero-image-ring--outer"></div>
-            <img src={santhoshImage} alt="Santhosh S M" className="hero-photo" />
+            <div className="hero-photo-orbit">
+              <div className="hero-photo-3d">
+                <img src={santhoshImage} alt="Santhosh S M" className="hero-photo" />
+                <span className="hero-photo-shine" aria-hidden="true"></span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
