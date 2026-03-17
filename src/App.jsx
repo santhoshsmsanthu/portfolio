@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Navbar from "./components/Navbar";
 import Starfield from "./components/Starfield";
+import CursorTrail from "./components/CursorTrail";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Credentials from "./components/Credentials";
@@ -130,6 +131,7 @@ function App() {
   return (
     <>
       <Starfield />
+      <CursorTrail />
       <Navbar
         activeSection={activeSection}
         menuOpen={menuOpen}

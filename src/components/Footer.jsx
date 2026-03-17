@@ -29,26 +29,7 @@ export default function Footer() {
                 <li><a href="https://www.linkedin.com/in/santhosh-s-m-50a6082a5" target="_blank" rel="noreferrer">LinkedIn</a></li>
                 <li><a href="mailto:santhoshsmsanthu0@gmail.com">Email</a></li>
               </ul>
-              <div className="footer-robot-standalone" aria-hidden="true">
-                <div className="footer-robot-wrap">
-                  <div className="robot-bubble"></div>
-                  <div className="robot">
-                    <div className="robot-antenna"></div>
-                    <div className="robot-head">
-                      <span className="robot-eye"></span>
-                      <span className="robot-eye"></span>
-                      <span className="robot-mouth"></span>
-                    </div>
-                    <div className="robot-body">
-                      <span className="robot-arm robot-arm-left"></span>
-                      <span className="robot-core"></span>
-                      <span className="robot-arm robot-arm-right"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
-
           </div>
         </div>
 
