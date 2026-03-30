@@ -64,6 +64,7 @@ function App() {
           if (!entry.isIntersecting) return;
           entry.target.querySelectorAll(".stat-number").forEach((stat) => {
             if (stat.dataset.animated === "true") return;
+            if (!stat.dataset.value) return;
             const finalValue = Number(stat.dataset.value || "0");
             let currentValue = 0;
             const increment = Math.max(1, Math.ceil(finalValue / 30));
