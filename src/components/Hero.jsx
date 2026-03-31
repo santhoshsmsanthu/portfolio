@@ -55,7 +55,7 @@ export default function Hero() {
               <span className="stat-label">6+ months internship hands-on experience</span>
             </div>
             <div className="stat-item">
-              <span className="stat-number" data-value="100">100+</span>
+              <span className="stat-number" data-value="20">20+</span>
               <span className="stat-label">Passion</span>
             </div>
           </div>

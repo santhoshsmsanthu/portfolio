@@ -70,7 +70,7 @@ export const techCategories = [
   {
     title: "Languages",
     skills: [
-      { name: "Python", percent: 90 },
+      { name: "Python", percent: 80 },
       { name: "JavaScript", percent: 85 },
       { name: "Java", percent: 80 },
     ],
