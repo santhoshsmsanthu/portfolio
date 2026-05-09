@@ -5,3 +5,16 @@ export function GithubIcon() {
     </svg>
   );
 }
+
+export function FigmaIcon() {
+  return (
+    <svg width="56" height="56" viewBox="0 0 56 84" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M14 0C6.268 0 0 6.268 0 14s6.268 14 14 14h14V0H14Z" fill="#F24E1E" />
+      <path d="M0 28c0-7.732 6.268-14 14-14h14v28H14C6.268 42 0 35.732 0 28Z" fill="#FF7262" />
+      <path d="M0 56c0-7.732 6.268-14 14-14h14v14c0 7.732-6.268 14-14 14S0 63.732 0 56Z" fill="#A259FF" />
+      <path d="M28 14c0-7.732 6.268-14 14-14s14 6.268 14 14-6.268 14-14 14H28V14Z" fill="#1ABCFE" />
+      <path d="M28 42V14h14c7.732 0 14 6.268 14 14s-6.268 14-14 14H28Z" fill="#0ACF83" />
+      <path d="M42 70c-7.732 0-14-6.268-14-14s6.268-14 14-14 14 6.268 14 14-6.268 14-14 14Z" fill="#FFFFFF" />
+    </svg>
+  );
+}

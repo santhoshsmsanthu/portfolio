@@ -1,5 +1,5 @@
 import { projects } from "../data/portfolioData";
-import { GithubIcon } from "./Icons";
+import { FigmaIcon, GithubIcon } from "./Icons";
 
 export default function Projects() {
   return (
@@ -12,7 +12,9 @@ export default function Projects() {
           {projects.map((project) => (
             <div className="project-card" key={project.title}>
               <div className="project-image">
-                <div className="project-placeholder">{project.emoji}</div>
+                <div className="project-placeholder">
+                  {project.icon === "figma" ? <FigmaIcon /> : project.emoji}
+                </div>
               </div>
               <div className="project-content">
                 <span className="project-year">{project.year}</span>
@@ -24,16 +26,20 @@ export default function Projects() {
                     <span className="tag" key={tag}>{tag}</span>
                   ))}
                 </div>
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="project-link project-link-icon"
-                  aria-label={`Open ${project.title} on GitHub`}
-                  title="Open on GitHub"
-                >
-                  <GithubIcon />
-                </a>
+                {project.github ? (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="project-link project-link-icon"
+                    aria-label={`Open ${project.title} on GitHub`}
+                    title="Open on GitHub"
+                  >
+                    <GithubIcon />
+                  </a>
+                ) : project.accessNote ? (
+                  <p className="project-access-note">{project.accessNote}</p>
+                ) : null}
               </div>
             </div>
           ))}

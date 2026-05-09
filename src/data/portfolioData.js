@@ -27,11 +27,13 @@ export const credentials = [
     title: "Technical Skills",
     items: [
       "Programming: Python, Java, C",
-      "Core CS: Data Structures and Algorithms, Object-Oriented Programming, Operating Systems (Basics), Computer Networks (Basics)",
-      "Web: HTML5, CSS3, JavaScript, React.js, Node.js, REST API integration, Fetch API",
-      "Databases: SQL, Joins, Normalization, MongoDB",
+      "Core CS: Data Structures and Algorithms, Object-Oriented Programming, Operating Systems (Basics), Computer Networks (Basics), SDLC (Basics)",
+      "Backend Development: Python, Node.js, React.js, API integration",
+      "Web Technologies: HTML5, CSS3, Tailwind CSS, JavaScript, Fetch API",
+      "Databases: SQL, Joins, Normalization, MongoDB, Supabase",
+      "DevOps & Cloud Tools: Git, GitHub, Netlify (Deployment), Basic Docker",
       "Machine Learning: Data preprocessing, CNN models, model training",
-      "Tools/Platforms: GitHub, Figma, Canva, Adobe",
+      "Tools & Platforms: GitHub, Figma, Canva, Adobe",
     ],
   },
   {
@@ -71,6 +73,7 @@ export const techCategories = [
     title: "Languages",
     skills: [
       { name: "Python", percent: 80 },
+      { name: "C", percent: 75 },
       { name: "JavaScript", percent: 85 },
       { name: "Java", percent: 80 },
     ],
@@ -80,14 +83,25 @@ export const techCategories = [
     skills: [
       { name: "React", percent: 85 },
       { name: "HTML/CSS", percent: 95 },
+      { name: "JavaScript", percent: 85 },
       { name: "Tailwind CSS", percent: 80 },
     ],
   },
   {
-    title: "Backend & Tools",
+    title: "Backend & APIs",
     skills: [
+      { name: "Python", percent: 80 },
       { name: "Node.js", percent: 85 },
-      { name: "SQL/MongoDB", percent: 85 },
+      { name: "API Integration", percent: 85 },
+      { name: "Fetch API", percent: 90 },
+    ],
+  },
+  {
+    title: "Databases",
+    skills: [
+      { name: "SQL", percent: 85 },
+      { name: "MongoDB", percent: 85 },
+      { name: "Supabase", percent: 80 },
     ],
   },
   {
@@ -95,13 +109,17 @@ export const techCategories = [
     skills: [
       { name: "Scikit-learn", percent: 85 },
       { name: "Pandas/NumPy", percent: 85 },
+      { name: "TensorFlow", percent: 80 },
+      { name: "Keras", percent: 80 },
     ],
   },
   {
-    title: "Tools & Platforms",
+    title: "DevOps & Tools",
     skills: [
       { name: "Git/GitHub", percent: 90 },
+      { name: "Docker (Basic)", percent: 70 },
       { name: "Figma", percent: 70 },
+      { name: "Canva", percent: 80 },
     ],
   },
 ];
@@ -114,7 +132,7 @@ export const projects = [
     description:
       "CNN-based system to detect AI-generated and manipulated images. Preprocessing, feature extraction and hybrid ML classifiers for forensic analysis.",
     tags: ["Python", "TensorFlow", "OpenCV"],
-    github: "https://github.com/santhoshsmsanthu",
+    github: "https://github.com/santhoshsmsanthu/major-project",
   },
   {
     emoji: "🔐",
@@ -123,16 +141,16 @@ export const projects = [
     description:
       "Implemented RSA algorithms in Python for secure data transmission. Features key generation, encryption, decryption with full cryptographic security.",
     tags: ["Python", "Cryptography", "Security"],
-    github: "https://github.com/santhoshsmsanthu",
+    github: "https://github.com/santhoshsmsanthu/Mini-project",
   },
   {
-    emoji: "🎨",
+    icon: "figma",
     year: "2024",
     title: "Restaurant UI Prototype",
     description:
       "Designed responsive restaurant website prototype using Figma. Modern UI/UX design with interactive components and responsive layout.",
     tags: ["Figma", "UI/UX", "Responsive"],
-    github: "https://github.com/santhoshsmsanthu",
+    github: "https://www.figma.com/proto/LswI0DLAoe4fiT7lnTaF6W/Untitled?node-id=1-3&starting-point-node-id=1%3A3",
   },
   {
     emoji: "🛠️",
@@ -144,6 +162,24 @@ export const projects = [
     github: "https://github.com/santhoshsmsanthu",
   },
   {
+    emoji: "🦸",
+    year: "2025",
+    title: "AI Superhero Cam",
+    description:
+      "AI-powered camera experience that detects and enhances visual frames with superhero-style effects. Focused on real-time image processing and interactive user experience.",
+    tags: ["Python", "TensorFlow", "Computer Vision"],
+    github: "https://github.com/santhoshsmsanthu/AI-superherocam",
+  },
+  {
+    emoji: "🧠",
+    year: "2025",
+    title: "Intent Recognition System",
+    description:
+      "Machine learning based system to classify user intent from text inputs for smarter conversational flows. Includes preprocessing, feature engineering, and model-based prediction.",
+    tags: ["Python", "NLP", "Machine Learning"],
+    github: "https://github.com/santhoshsmsanthu/intent-recognition-system",
+  },
+  {
     emoji: "⚡",
     year: "2025 - 26",
     internship: "🏢 Built during Internship at Posspole",
@@ -151,7 +187,7 @@ export const projects = [
     description:
       "React-based interactive dashboard frontend for the Posspole platform. Built with Vite, Tailwind CSS, Chart.js, and ApexCharts for rich data visualisation and responsive UI.",
     tags: ["React 19", "Vite", "Tailwind CSS", "Chart.js"],
-    github: "https://github.com/santhoshsmsanthu",
+    accessNote: "Source code available upon request due to company policy.",
   },
   {
     emoji: "🏢",
@@ -161,6 +197,16 @@ export const projects = [
     description:
       "Full-stack CRM system with JWT authentication, real-time Socket.io messaging, automated email via Nodemailer, QR code generation, scheduled cron jobs, and AI-powered features via HuggingFace. Containerised with Docker.",
     tags: ["Node.js", "Express", "MongoDB", "Socket.io", "Docker"],
-    github: "https://github.com/santhoshsmsanthu",
+    accessNote: "Source code available upon request due to company policy.",
+  },
+  {
+    emoji: "🧬",
+    year: "2025 - 26",
+    internship: "🏢 Built during Internship at Posspole",
+    title: "Posspole Biotech",
+    description:
+      "Internship project for the Posspole ecosystem focused on biotech-oriented workflows and application delivery. Built with a professional implementation flow and internal collaboration requirements in mind.",
+    tags: ["Internship", "Biotech", "Posspole"],
+    accessNote: "Source code available upon request due to company policy.",
   },
 ];
