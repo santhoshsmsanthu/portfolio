@@ -24,6 +24,14 @@ export const credentials = [
     ],
   },
   {
+    title: "Professional Experience",
+    items: [
+      "Intern Trainee, Posspole Pvt. Ltd. — 8-month internship (worked on live client projects)",
+      "Developed a CRM Admin Dashboard using React.js, Node.js, MongoDB; implemented features like user profiles, attendance tracking, and salary management",
+      "Collaborated with cross-functional teams, followed SDLC practices, and delivered production-ready frontend components using Vite and Tailwind CSS",
+    ],
+  },
+  {
     title: "Technical Skills",
     items: [
       "Programming: Python, Java, C",
@@ -39,9 +47,10 @@ export const credentials = [
   {
     title: "Achievements",
     items: [
-      "Academic Distinction: Secured 6th rank in 6th semester among Computer Science and Design students at BGS College of Engineering and Technology",
-      "Volunteer Coordinator, Advaya Hackathon: Managed 50+ participants and coordinated activities for smooth event execution",
-      "Participant, NASA International Space Apps Challenge 2024: Contributed to solving real-world space and Earth challenges",
+      "Secured 6th Rank in the 6th semester and maintained an overall CGPA of 8.4",
+      "Volunteer Coordinator, Advaya Hackathon — Managed 50+ participants and coordinated event activities",
+      "Participant, NASA International Space Apps Challenge 2024 — Collaborated on solutions for space and Earth challenges",
+      "Active participant in competitive programming contests and coding events",
     ],
   },
   {
@@ -51,19 +60,30 @@ export const credentials = [
       "Introduction to Artificial Intelligence",
       "Introduction to Data Science",
       "Introduction to Deep Learning",
-      "NASA Space Apps Challenge - Galactic Problem Solver",
+      "JavaScript Essentials",
+      "React.js",
+      "Responsive Web Design",
+      "MongoDB Basics",
+      "Git & GitHub",
+      "NASA Space Apps Challenge (Galactic Problem Solver)",
       "Python Programming",
       "Web Development",
-      "AI For All (AI Appreciate Stage)",
-      "AI For All (AI Aware Stage)",
+      "Infosys Springboard",
+      "Cisco Networking Academy",
+      "Great Learning",
+      "freeCodeCamp",
+      "MongoDB University",
+      "Oasis Infobyte - Python Programming",
+      "SkillCraft - Web Development",
     ],
   },
   {
     title: "Extracurricular Activities",
     items: [
-      "NASA International Space Apps Challenge 2024: Participated in a global hackathon solving space and Earth challenges",
-      "Hackathons and Coding Events: Regular participant in innovation competitions focused on real-world problem solving",
-      "Interests: Programming, music, continuous learning, and self-discipline practices",
+      "NASA International Space Apps Challenge 2024 — Participated in a global hackathon",
+      "Infosys Springboard, Cisco Networking Academy, Great Learning, freeCodeCamp, MongoDB University — completed courses and workshops",
+      "Hackathons and Coding Events — Regular participant in innovation competitions",
+      "Interests: Programming, music, continuous learning, and self-discipline",
     ],
   },
 ];

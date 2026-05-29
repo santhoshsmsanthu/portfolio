@@ -8,21 +8,17 @@ export default function About() {
         <div className="about-content">
           <div className="about-text">
             <p>
-              I am a passionate Full-Stack Developer and Machine Learning enthusiast with
-              a strong foundation in software engineering. My journey in programming has
-              been driven by curiosity and a desire to solve real-world problems through
-              innovative technology solutions.
+              I am a Computer Science and Design undergraduate specializing in full-stack
+              web development and machine learning. I build scalable web applications
+              using React.js, Node.js, MongoDB, SQL, REST APIs, and Supabase, and I
+              have hands-on experience implementing machine learning models for real-world
+              problems.
             </p>
             <p>
-              I specialize in building scalable web applications, designing robust APIs,
-              implementing machine learning systems, and creating intuitive user
-              interfaces. I am proficient in modern frameworks and always eager to
-              explore cutting-edge technologies.
-            </p>
-            <p>
-              My approach combines technical excellence with clean code principles,
-              ensuring that every project is maintainable, efficient, and built to last.
-              I believe in continuous learning and staying updated with industry trends.
+              I completed an 8-month internship at Posspole Pvt. Ltd., contributing to
+              live client projects and production websites. I am passionate about
+              solving complex problems, learning emerging technologies, and delivering
+              impactful digital solutions through clean, maintainable code.
             </p>
 
             <div className="about-traits">

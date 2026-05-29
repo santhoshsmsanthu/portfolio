@@ -482,6 +482,11 @@ section {
   padding: 56px 20px;
 }
 
+/* Ensure anchored sections account for the fixed navbar height */
+#projects {
+  scroll-margin-top: 90px;
+}
+
 .section-title {
   font-size: clamp(1.8rem, 5vw, 2.5rem);
   font-weight: 800;
