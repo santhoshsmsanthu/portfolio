@@ -18,7 +18,7 @@ export const credentials = [
   {
     title: "Education",
     items: [
-      "BGS College of Engineering and Technology, Bengaluru - Bachelor of Engineering in Computer Science and Design (CGPA: 8.1), 2022 - 2026",
+      "BGS College of Engineering and Technology, Bengaluru - Bachelor of Engineering in Computer Science and Design (CGPA: 8.3), 2022 - 2026",
       "Presidency P.U College, Sira - Grade 12: 84.6%, 2020 - 2022",
       "Mount View Public School, Madhugiri - Grade 10: 87.6%, 2019 - 2020",
     ],
@@ -47,7 +47,7 @@ export const credentials = [
   {
     title: "Achievements",
     items: [
-      "Secured 6th Rank in the 6th semester and maintained an overall CGPA of 8.4",
+      "Secured 6th Rank in the 6th semester",
       "Volunteer Coordinator, Advaya Hackathon — Managed 50+ participants and coordinated event activities",
       "Participant, NASA International Space Apps Challenge 2024 — Collaborated on solutions for space and Earth challenges",
       "Active participant in competitive programming contests and coding events",
