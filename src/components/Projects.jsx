@@ -47,20 +47,20 @@ export default function Projects() {
 
         <div className="projects-summary">
           <div className="summary-item">
-            <span className="summary-number">6+</span>
+            <span className="summary-number">7+</span>
             <span className="summary-label">Projects Completed</span>
           </div>
           <div className="summary-item">
-            <span className="summary-number">8+</span>
+            <span className="summary-number">12+</span>
             <span className="summary-label">Technologies</span>
           </div>
           <div className="summary-item">
-            <span className="summary-number">3</span>
+            <span className="summary-number">4</span>
             <span className="summary-label">Project Types</span>
           </div>
           <div className="summary-item">
-            <span className="summary-number">100%</span>
-            <span className="summary-label">Open Source</span>
+            <span className="summary-number">8 Months</span>
+            <span className="summary-label">Internship Exposure</span>
           </div>
         </div>
       </div>

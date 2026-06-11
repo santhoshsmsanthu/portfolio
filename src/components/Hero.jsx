@@ -35,28 +35,28 @@ export default function Hero() {
         <div className="hero-text">
           <span className="hero-greeting">Hi, I'm</span>
           <h1 className="hero-title">Santhosh S M</h1>
-          <p className="hero-subtitle">Full-Stack Developer</p>
+          <p className="hero-subtitle">Computer Science and Design Undergraduate</p>
           <p className="hero-description">
-            Building responsive web applications, AI-powered systems, and innovative
-            solutions using modern technologies.
+            Building full-stack web applications and reliable backend integrations using
+            React.js, Node.js, TypeScript, MongoDB, SQL, and REST APIs.
           </p>
 
           <div className="hero-stats">
             <div className="stat-item">
-              <span className="stat-number" data-value="10">10+</span>
+              <span className="stat-number" data-value="7">7+</span>
               <span className="stat-label">Projects</span>
             </div>
             <div className="stat-item">
-              <span className="stat-number" data-value="5">5+</span>
+              <span className="stat-number" data-value="8">8+</span>
               <span className="stat-label">Tech Stacks</span>
             </div>
             <div className="stat-item">
-              <span className="stat-number">Fresher</span>
-              <span className="stat-label">6+ months internship hands-on experience</span>
+              <span className="stat-number">8 Months</span>
+              <span className="stat-label">Industry Internship Experience</span>
             </div>
             <div className="stat-item">
-              <span className="stat-number" data-value="20">20+</span>
-              <span className="stat-label">Passion</span>
+              <span className="stat-number" data-value="10">10+</span>
+              <span className="stat-label">Certifications</span>
             </div>
           </div>
 
