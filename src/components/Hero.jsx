@@ -35,7 +35,7 @@ export default function Hero() {
         <div className="hero-text">
           <span className="hero-greeting">Hi, I'm</span>
           <h1 className="hero-title">Santhosh S M</h1>
-          <p className="hero-subtitle">Computer Science and Design Undergraduate</p>
+          <p className="hero-subtitle">Graduated in Computer Science and Design @BGSCET</p>
           <p className="hero-description">
             Building full-stack web applications and reliable backend integrations using
             React.js, Node.js, TypeScript, MongoDB, SQL, and REST APIs.
@@ -55,7 +55,7 @@ export default function Hero() {
               <span className="stat-label">Industry Internship Experience</span>
             </div>
             <div className="stat-item">
-              <span className="stat-number" data-value="10">10+</span>
+              <span className="stat-number" data-value="10">6+</span>
               <span className="stat-label">Certifications</span>
             </div>
           </div>

@@ -26,7 +26,7 @@ export default function Footer() {
               </div>
               <ul>
                 <li><a href="https://github.com/santhoshsmsanthu" target="_blank" rel="noreferrer">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/santhosh-s-m-50a6082a5" target="_blank" rel="noreferrer">LinkedIn</a></li>
+                <li><a href="https://www.linkedin.com/in/santhosh-s-m" target="_blank" rel="noreferrer">LinkedIn</a></li>
                 <li><a href="mailto:santhoshsmsanthu0@gmail.com">Email</a></li>
               </ul>
             </div>

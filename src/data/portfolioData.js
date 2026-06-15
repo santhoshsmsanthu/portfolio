@@ -36,20 +36,18 @@ export const credentials = [
   {
     title: "Technical Skills",
     items: [
-      "Programming Languages: Python, Java, C, JavaScript",
-      "Core Computer Science: Data Structures & Algorithms, Object-Oriented Programming, SDLC, Software Testing Fundamentals, Operating Systems (Basics), Computer Networks (Basics)",
-      "Backend Development: Python, Node.js, React.js, TypeScript, API Integration",
-      "Web Technologies: HTML5, CSS3, Tailwind CSS, JavaScript, Fetch API, REST APIs",
-      "Databases: SQL, Joins, Normalization, MongoDB, Supabase",
-      "Testing & Automation: Selenium, PyTest, Postman, Manual Testing, API Testing, Database Testing",
-      "DevOps & Cloud Tools: Git, GitHub, Netlify (Deployment), Basic Docker",
-      "Machine Learning: Data Preprocessing, CNN Models, Model Training",
-      "Tools & Platforms: GitHub, Figma, Canva, Adobe",
+      "Programming Languages: JavaScript, Python, Java ",
+      "Frontend: React.js, HTML5, CSS3, Tailwind CSS",
+      "Backend: Node.js, REST APIs",
+      "Databases: MongoDB, SQL",
+      "Tools: Git, GitHub, Netlify, Figma",
+      "Core Concepts: Data Structures & Algorithms, Object-Oriented Programming, Database Management Systems, Computer Networks, Operating Systems "
     ],
   },
   {
     title: "Achievements",
     items: [
+      "Best Conduct Award – Recognized by the Department of Computer Science and Design for exemplary conduct and professionalism.",
       "Secured 6th Rank in the 6th semester and maintained an overall CGPA of 8.3",
       "Volunteer Coordinator, Advaya Hackathon — Managed 50+ participants and coordinated event activities",
       "Participant, NASA International Space Apps Challenge 2024 — Collaborated on solutions for space and Earth challenges",
@@ -63,13 +61,8 @@ export const credentials = [
       "JavaScript Essentials - Cisco Networking Academy",
       "React.js - Great Learning",
       "MongoDB Basics - MongoDB University",
-      "Git & GitHub - Infosys Springboard",
       "Responsive Web Design - freeCodeCamp",
-      "Python Programming - Oasis Infobyte",
-      "Web Development - SkillCraft",
       "Introduction to Artificial Intelligence - Infosys Springboard",
-      "Introduction to Deep Learning - Infosys Springboard",
-      "NASA Space Apps Challenge - Galactic Problem Solver",
     ],
   },
   {
@@ -86,10 +79,9 @@ export const techCategories = [
   {
     title: "Languages",
     skills: [
-      { name: "Python", percent: 80 },
-      { name: "C", percent: 75 },
-      { name: "JavaScript", percent: 85 },
-      { name: "Java", percent: 80 },
+      { name: "Python", percent: 70 },
+      { name: "JavaScript", percent: 75 },
+      { name: "Java", percent: 70 },
     ],
   },
   {
@@ -104,37 +96,27 @@ export const techCategories = [
   {
     title: "Backend & APIs",
     skills: [
-      { name: "Python", percent: 80 },
+      { name: "Python", percent: 70 },
       { name: "Node.js", percent: 85 },
-      { name: "TypeScript", percent: 75 },
-      { name: "API Integration", percent: 85 },
-      { name: "REST APIs", percent: 90 },
+      { name: "API Integration", percent: 60 },
+      { name: "REST APIs", percent: 70 },
     ],
   },
   {
     title: "Databases",
     skills: [
-      { name: "SQL", percent: 85 },
-      { name: "MongoDB", percent: 85 },
-      { name: "Supabase", percent: 80 },
+      { name: "SQL", percent: 70 },
+      { name: "MongoDB", percent: 80 },
     ],
   },
+  
   {
-    title: "Testing & QA",
-    skills: [
-      { name: "Selenium", percent: 85 },
-      { name: "PyTest", percent: 85 },
-      { name: "Postman", percent: 85 },
-      { name: "API/DB Testing", percent: 80 },
-    ],
-  },
-  {
-    title: "DevOps & Tools",
+    title: "Tools",
     skills: [
       { name: "Git/GitHub", percent: 90 },
-      { name: "Docker (Basic)", percent: 70 },
       { name: "Figma", percent: 70 },
       { name: "Canva", percent: 80 },
+      { name: "Adobe", percent: 70}
     ],
   },
 ];
@@ -149,22 +131,7 @@ export const projects = [
     tags: ["Python", "TensorFlow", "OpenCV"],
     github: "https://github.com/santhoshsmsanthu/major-project",
   },
-  {
-    emoji: "✅",
-    year: "2025",
-    title: "Web Application Test Automation",
-    description:
-      "Developed automated test scripts for functional and UI testing using Selenium, Python, and PyTest. Integrated test execution with Jenkins for continuous testing.",
-    tags: ["Selenium", "Python", "PyTest", "Jenkins"],
-  },
-  {
-    emoji: "🔗",
-    year: "2025",
-    title: "API Testing & Validation Project",
-    description:
-      "Designed and executed REST API test cases using Postman. Performed SQL-based database validation and defect reporting.",
-    tags: ["Postman", "REST APIs", "SQL", "Testing"],
-  },
+  
   {
     emoji: "🔐",
     year: "2024",
@@ -183,15 +150,7 @@ export const projects = [
     tags: ["Figma", "UI/UX", "Responsive"],
     github: "https://www.figma.com/proto/LswI0DLAoe4fiT7lnTaF6W/Untitled?node-id=1-3&starting-point-node-id=1%3A3",
   },
-  {
-    emoji: "🛠️",
-    year: "2024",
-    title: "Web Development Suite",
-    description:
-      "Developed responsive web applications including a landing page, temperature converter, and stopwatch using HTML, CSS, and JavaScript.",
-    tags: ["HTML/CSS", "JavaScript", "Responsive"],
-    github: "https://github.com/santhoshsmsanthu",
-  },
+
   {
     emoji: "⚡",
     year: "2025 - 26",

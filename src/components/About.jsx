@@ -10,7 +10,7 @@ export default function About() {
             <p>
               I am a Computer Science and Design undergraduate specializing in full-stack
               web development and machine learning. I build scalable web applications
-              using React.js, Node.js, MongoDB, SQL, REST APIs, and Supabase, and I
+              using React.js, Node.js, MongoDB, SQL and REST APIs and I
               have hands-on experience implementing machine learning models for real-world
               problems.
             </p>
