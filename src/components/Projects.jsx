@@ -17,7 +17,7 @@ export default function Projects() {
                 </div>
               </div>
               <div className="project-content">
-                <span className="project-year">{project.year}</span>
+                {project.year ? <span className="project-year">{project.year}</span> : null}
                 {project.internship ? <span className="project-internship">{project.internship}</span> : null}
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-description">{project.description}</p>
@@ -47,7 +47,7 @@ export default function Projects() {
 
         <div className="projects-summary">
           <div className="summary-item">
-            <span className="summary-number">7+</span>
+            <span className="summary-number">5</span>
             <span className="summary-label">Projects Completed</span>
           </div>
           <div className="summary-item">

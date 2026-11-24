@@ -36,12 +36,10 @@ export const credentials = [
   {
     title: "Technical Skills",
     items: [
-      "Programming Languages: JavaScript, Python, Java ",
+      "Programming: Java, JavaScript, TypeScript, Python, OOP, DSA",
       "Frontend: React.js, HTML5, CSS3, Tailwind CSS",
-      "Backend: Node.js, REST APIs",
-      "Databases: MongoDB, SQL",
-      "Tools: Git, GitHub, Netlify, Figma",
-      "Core Concepts: Data Structures & Algorithms, Object-Oriented Programming, Database Management Systems, Computer Networks, Operating Systems "
+      "Backend: Node.js, Express.js, Flask, FastAPI, REST APIs, CRUD, JWT, Authentication, Authorization, Middleware",
+      "Database & Tools: MySQL, SQL, MongoDB, Git, GitHub, Docker, Postman",
     ],
   },
   {
@@ -77,46 +75,54 @@ export const credentials = [
 
 export const techCategories = [
   {
-    title: "Languages",
+    title: "Languages & Concepts",
     skills: [
       { name: "Python", percent: 70 },
       { name: "JavaScript", percent: 75 },
+      { name: "TypeScript", percent: 70 },
       { name: "Java", percent: 70 },
+      { name: "OOP", percent: 70 },
+      { name: "DSA", percent: 70 },
     ],
   },
   {
     title: "Frontend",
     skills: [
-      { name: "React", percent: 85 },
-      { name: "HTML/CSS", percent: 95 },
-      { name: "JavaScript", percent: 85 },
+      { name: "React.js", percent: 85 },
+      { name: "HTML5", percent: 95 },
+      { name: "CSS3", percent: 95 },
       { name: "Tailwind CSS", percent: 80 },
     ],
   },
   {
     title: "Backend & APIs",
     skills: [
-      { name: "Python", percent: 70 },
       { name: "Node.js", percent: 85 },
-      { name: "API Integration", percent: 60 },
-      { name: "REST APIs", percent: 70 },
+      { name: "Express.js", percent: 75 },
+      { name: "Flask", percent: 65 },
+      { name: "FastAPI", percent: 65 },
+      { name: "REST APIs", percent: 75 },
+      { name: "CRUD", percent: 75 },
+      { name: "JWT", percent: 70 },
+      { name: "Authentication", percent: 70 },
+      { name: "Authorization", percent: 70 },
+      { name: "Middleware", percent: 70 },
     ],
   },
   {
     title: "Databases",
     skills: [
+      { name: "MySQL", percent: 70 },
       { name: "SQL", percent: 70 },
       { name: "MongoDB", percent: 80 },
     ],
   },
-  
   {
     title: "Tools",
     skills: [
       { name: "Git/GitHub", percent: 90 },
-      { name: "Figma", percent: 70 },
-      { name: "Canva", percent: 80 },
-      { name: "Adobe", percent: 70}
+      { name: "Docker", percent: 70 },
+      { name: "Postman", percent: 75 },
     ],
   },
 ];
@@ -127,58 +133,38 @@ export const projects = [
     year: "2025",
     title: "Forensic Analysis of Digital Images",
     description:
-      "Developed a CNN-based image forensics system to detect AI-generated and manipulated images using Python and deep learning.",
-    tags: ["Python", "TensorFlow", "OpenCV"],
+      "Built a CNN-based system using deep learning to detect AI-generated and manipulated images across a dataset of 10,000 images.",
+    tags: ["Python", "Deep Learning", "CNN"],
     github: "https://github.com/santhoshsmsanthu/major-project",
   },
-  
+  {
+    emoji: "📄",
+    title: "Resume Screening System",
+    description:
+      "Created an AI-based application that analyzes resumes and helps screen candidates against relevant skills and job requirements.",
+    tags: ["Python", "AI/ML"],
+  },
+  {
+    emoji: "🎬",
+    title: "AI Lip-Sync Web App",
+    description:
+      "Developed a web application that generates lip-sync videos from image and audio inputs using the Wav2Lip pipeline.",
+    tags: ["Node.js", "Express.js", "JavaScript", "Wav2Lip"],
+  },
+  {
+    emoji: "🎓",
+    title: "Velora - Student Academic Portal",
+    description:
+      "Built a student platform for academic management and tracking, with student profiles, role-based access, authentication, a calendar, and reminders.",
+    tags: ["React", "TypeScript", "Supabase"],
+  },
   {
     emoji: "🔐",
     year: "2024",
-    title: "Encryption and Decryption System",
+    title: "RSA Encryption & Decryption System",
     description:
-      "Built an RSA-based encryption and decryption system in Python for secure data transmission.",
-    tags: ["Python", "Cryptography", "Security"],
+      "Implemented RSA key generation, encryption, and decryption in Python for secure data transmission.",
+    tags: ["Python", "RSA", "Cryptography"],
     github: "https://github.com/santhoshsmsanthu/Mini-project",
-  },
-  {
-    icon: "figma",
-    year: "2024",
-    title: "Restaurant UI Prototype",
-    description:
-      "Designed responsive restaurant website prototype using Figma. Modern UI/UX design with interactive components and responsive layout.",
-    tags: ["Figma", "UI/UX", "Responsive"],
-    github: "https://www.figma.com/proto/LswI0DLAoe4fiT7lnTaF6W/Untitled?node-id=1-3&starting-point-node-id=1%3A3",
-  },
-
-  {
-    emoji: "⚡",
-    year: "2025 - 26",
-    internship: "Built during Internship at Posspole",
-    title: "Posspole Catalyst",
-    description:
-      "React-based interactive dashboard frontend for the Posspole platform. Built with Vite, Tailwind CSS, Chart.js, and ApexCharts for rich data visualisation and responsive UI.",
-    tags: ["React", "Vite", "Tailwind CSS", "Chart.js"],
-    accessNote: "Source code available upon request due to company policy.",
-  },
-  {
-    emoji: "🏢",
-    year: "2025 - 26",
-    internship: "Built during Internship at Posspole",
-    title: "Posspole Admin Dashboard CRM",
-    description:
-      "Full-stack CRM system with JWT authentication, real-time Socket.io messaging, automated email via Nodemailer, QR code generation, scheduled cron jobs, and AI-powered features via HuggingFace. Containerised with Docker.",
-    tags: ["Node.js", "Express", "MongoDB", "Socket.io", "Docker"],
-    accessNote: "Source code available upon request due to company policy.",
-  },
-  {
-    emoji: "🧬",
-    year: "2025 - 26",
-    internship: "Built during Internship at Posspole",
-    title: "Posspole Biotech",
-    description:
-      "Internship project for the Posspole ecosystem focused on biotech-oriented workflows and application delivery. Built with a professional implementation flow and internal collaboration requirements in mind.",
-    tags: ["Internship", "Biotech", "Posspole"],
-    accessNote: "Source code available upon request due to company policy.",
   },
 ];
